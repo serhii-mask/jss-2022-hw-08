@@ -1645,6 +1645,7 @@ nav {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
+  letter-spacing: 0.06em;
 }
 
 .card__text {

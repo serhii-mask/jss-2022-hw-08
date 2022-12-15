@@ -285,6 +285,9 @@ body {
 body.is-open {
   overflow: hidden;
 }
+body.modal-open {
+  overflow: hidden;
+}
 
 button {
   cursor: pointer;
@@ -432,12 +435,6 @@ ul {
   .header__navigation.is-open {
     display: block;
   }
-}
-
-.header__navigation.is-open {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: initial;
 }
 
 nav {

@@ -11,6 +11,10 @@ body {
 	&.is-open {
 		overflow: hidden;
 	}
+
+	&.modal-open {
+		overflow: hidden;
+	}
 }
 
 button {

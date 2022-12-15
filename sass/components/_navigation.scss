@@ -17,12 +17,6 @@
     }
 }
 
-.header__navigation.is-open {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: initial;
-}
-
 nav {
     margin-right: 90px;
     @media screen and (min-width: 1200px) {

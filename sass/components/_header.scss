@@ -1,0 +1,31 @@
+.header {
+	margin: 0;
+	padding: 0;
+	border-bottom: 1px solid #ECECEC;
+}
+
+.header__flex {
+	display: flex;
+	align-items: center;
+}
+
+.menu-button {
+	display: inline-flex;
+	margin: 0;
+	margin-left: auto;
+	padding: 0;
+	border: none;
+	background-color: transparent;
+}
+
+.menu-button .icon-cross {
+	display: none;
+}
+
+.menu-button.is-open .icon-cross {
+	display: block;
+}
+
+.menu-button.is-open .icon-menu {
+	display: none;
+}

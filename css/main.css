@@ -282,7 +282,7 @@ body {
   font-weight: 400;
   letter-spacing: 0.03em;
 }
-body.modal-open {
+body.is-open {
   overflow: hidden;
 }
 
@@ -340,6 +340,7 @@ ul {
 }
 
 .header {
+  position: relative;
   margin: 0;
   padding: 0;
   border-bottom: 1px solid #ECECEC;
@@ -363,6 +364,16 @@ ul {
   padding: 0;
   border: none;
   background-color: transparent;
+  z-index: 1;
+}
+@media screen and (min-width: 768px) {
+  .menu-button {
+    display: none;
+  }
+}
+
+.menu-button:hover .icon-burger, .menu-button:focus .icon-burger {
+  fill: var(--accent-color);
 }
 
 .menu-button .icon-cross {
@@ -410,8 +421,23 @@ ul {
 }
 @media screen and (max-width: 767px) {
   .header__navigation {
+    position: absolute;
+    top: 0;
+    left: 0;
     display: none;
+    width: 100%;
+    height: 790px;
+    background-color: #fff;
   }
+  .header__navigation.is-open {
+    display: block;
+  }
+}
+
+.header__navigation.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: initial;
 }
 
 nav {
@@ -419,29 +445,47 @@ nav {
 }
 @media screen and (min-width: 1200px) {
   nav {
-    margin-right: 362px;
+    margin-right: 315px;
   }
 }
 
-.site-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+@media screen and (max-width: 767px) {
+  .site-nav {
+    margin-left: 40px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .site-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .site-nav__item {
   position: relative;
 }
-.site-nav__item:not(:last-child) {
-  margin-right: 50px;
+@media screen and (max-width: 767px) {
+  .site-nav__item:first-child {
+    margin-top: 48px;
+  }
+  .site-nav__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .site-nav__item:not(:last-child) {
+    margin-right: 50px;
+  }
 }
 
 .site-nav__link {
-  display: block;
+  display: inline;
   color: var(--title-text-color);
   font-weight: 500;
+  font-size: 40px;
   line-height: 1.14;
-  letter-spacing: 0.02em;
+  letter-spacing: 1.175;
   padding-top: 32px;
   padding-bottom: 32px;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -450,22 +494,46 @@ nav {
 .site-nav__link:hover, .site-nav__link:focus {
   color: var(--accent-color);
 }
+@media screen and (min-width: 768px) {
+  .site-nav__link {
+    display: block;
+    font-size: 14px;
+    line-height: 1.1428571429;
+  }
+}
 
 .site-nav__link--active {
   color: var(--accent-color);
 }
-.site-nav__link--active::after {
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  content: "";
-  display: block;
-  width: 100%;
-  height: 4px;
-  background-color: var(--accent-color);
-  border-radius: 2px;
+@media screen and (min-width: 768px) {
+  .site-nav__link--active::after {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+  }
 }
 
+@media screen and (max-width: 767px) {
+  .auth-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    margin-top: 300px;
+    margin-left: 40px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .auth-nav {
     display: -webkit-box;
@@ -481,6 +549,11 @@ nav {
     margin-bottom: 10px;
   }
 }
+@media screen and (min-width: 1200px) {
+  .auth-nav__item:not(:last-child) {
+    margin-right: 30px;
+  }
+}
 
 .auth-nav__link {
   display: -webkit-box;
@@ -491,14 +564,28 @@ nav {
           align-items: center;
   color: var(--primary-text-color);
   font-weight: 500;
-  font-size: 12px;
-  line-height: 1.14;
+  font-size: 24px;
+  line-height: 1.1666666667;
   letter-spacing: 0.02em;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .auth-nav__link:hover, .auth-nav__link:focus {
   color: var(--accent-color);
+}
+@media screen and (max-width: 767px) {
+  .auth-nav__link.phone-link {
+    margin-bottom: 32px;
+    font-size: 34px;
+    line-height: 1.1764705882;
+    color: var(--accent-color);
+  }
+}
+@media screen and (min-width: 768px) {
+  .auth-nav__link {
+    font-size: 12px;
+    line-height: 1.1666666667;
+  }
 }
 @media screen and (min-width: 1200px) {
   .auth-nav__link {
@@ -519,6 +606,42 @@ nav {
 .auth-nav__link:hover .auth-nav__icon-phone,
 .auth-nav__link:focus .auth-nav__icon-phone {
   fill: var(--accent-color);
+}
+@media screen and (max-width: 767px) {
+  .auth-nav__icon-email,
+.auth-nav__icon-phone {
+    display: none;
+  }
+}
+
+.menu-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 64px;
+}
+@media screen and (max-width: 767px) {
+  .menu-social {
+    margin-left: 40px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .menu-social {
+    display: none;
+  }
+}
+
+.menu-social__item:not(:last-child) {
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.menu-social__link {
+  margin: 10px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.2222222222;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
 }
 
 .hero {
@@ -1225,6 +1348,7 @@ nav {
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   overflow-y: scroll;
+  z-index: 2;
 }
 
 .backdrop.is-hidden {
@@ -1246,6 +1370,7 @@ nav {
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  z-index: 3;
 }
 @media screen and (min-width: 768px) {
   .modal {
@@ -1259,7 +1384,7 @@ nav {
 }
 @media screen and (min-width: 1200px) {
   .modal {
-    top: 50%;
+    top: 40%;
   }
 }
 

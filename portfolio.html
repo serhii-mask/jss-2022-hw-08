@@ -9,50 +9,66 @@
 </head>
 <body>
 <!-- Шапка сайту -->
-	<header class="header">
-		<div class="container header__flex">
-			<a href="./index.html" class="logo" lang="en"><span class="logo__span">Web</span>Studio</a>
-			<div class="header__navigation">
-				<nav>
-					<ul class="site-nav">
-						<li class="site-nav__item">
-							<a href="./index.html" class="site-nav__link">Студія</a></li>
-						<li class="site-nav__item">
-							<a href="./portfolio.html" class="site-nav__link site-nav__link--active">Портфоліо</a></li>
-						<li class="site-nav__item">
-							<a href="" class="site-nav__link">Контакти</a></li>
-					</ul>
-				</nav>
-				
-				<ul class="auth-nav">
-					<li class="auth-nav__item">
-						<a href="mailto:info@devstudio.com" class="auth-nav__link">
-						<svg class="auth-nav__icon-email" width="16" height="12">
-							<use href="./images/sprite.svg#icon-email"></use>
-						</svg>
-						info@devstudio.com</a></li>
-					<li class="auth-nav__item">
-						<a href="tel:380977777777" class="auth-nav__link">
-						<svg class="auth-nav__icon-phone" width="10" height="16">
-							<use href="./images/sprite.svg#icon-phone"></use>
-						</svg>
-						+38 097 777 77 77</a></li>
+<header class="header">
+	<div class="container header__flex">
+		<a href="./index.html" class="logo" lang="en"><span class="logo__span">Web</span>Studio</a>
+		<button type="button" 
+			class="menu-button"
+			aria-expanded="false"
+			aria-controls="header-navigation"
+			data-menu-button>
+			<svg 
+				width="40" 
+				height="40"
+				aria-label="Перемикач мобільного меню"
+			>
+				<use class="icon-cross" href="./images/sprite.svg#icon-cross"></use>
+				<use class="icon-menu" href="./images/sprite.svg#icon-menu"></use>
+			</svg>
+		</button>
+		<div class="header__navigation" id="header-navigation" data-menu>
+			<nav>
+				<ul class="site-nav">
+					<li class="site-nav__item">
+						<a href="./index.html" class="site-nav__link">Студія</a></li>
+					<li class="site-nav__item">
+						<a href="./portfolio.html" class="site-nav__link site-nav__link--active">Портфоліо</a></li>
+					<li class="site-nav__item">
+						<a href="" class="site-nav__link">Контакти</a></li>
 				</ul>
-			</div>
-			<button type="button" class="menu-button"
-				aria-expanded="false"
-				data-menu-button>
-				<svg 
-					width="40" 
-					height="40"
-					aria-label="Перемикач мобільного меню"
-				>
-					<use class="icon-cross" href="./images/sprite.svg#icon-cross"></use>
-					<use class="icon-menu" href="./images/sprite.svg#icon-menu"></use>
-				</svg>
-			</button>
+			</nav>
+			
+			<ul class="auth-nav">
+				<li class="auth-nav__item">
+					<a href="mailto:info@devstudio.com" class="auth-nav__link email-link">
+					<svg class="auth-nav__icon-email" width="16" height="12">
+						<use href="./images/sprite.svg#icon-email"></use>
+					</svg>
+					info@devstudio.com</a></li>
+				<li class="auth-nav__item">
+					<a href="tel:380977777777" class="auth-nav__link phone-link">
+					<svg class="auth-nav__icon-phone" width="10" height="16">
+						<use href="./images/sprite.svg#icon-phone"></use>
+					</svg>
+					+38 097 777 77 77</a></li>
+			</ul>
+			<ul class="menu-social">
+				<li class="menu-social__item">
+					<a href="" class="menu-social__link">Instagram</a>
+				</li>
+				<li class="menu-social__item">
+					<a href="" class="menu-social__link">Twitter</a>
+				</li>
+				<li class="menu-social__item">
+					<a href="" class="menu-social__link">Facebook</a>
+				</li>
+				<li class="menu-social__item">
+					<a href="" class="menu-social__link">LinkedIn</a>
+				</li>
+			</ul>
 		</div>
-	</header>
+	</div>
+</header>
 <!-- Тіло сайту -->
 	<main>
 		<div class="container">

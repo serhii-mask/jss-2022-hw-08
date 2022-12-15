@@ -6,6 +6,7 @@
 .modal-title {
 	display: flex;
 	justify-content: center;
+	text-align: center;
 	margin: 0;
 	margin-bottom: 12px;
 	font-weight: 700;
@@ -88,7 +89,13 @@
 }
 
 .checkbox-text {
-	line-height: calc(24/14);
+	font-size: 12px;
+	line-height: calc(14 / 12);
+
+	@media screen and (min-width: 1200px) {
+		font-size: 14px;
+		line-height: calc(24/14);
+	}
 }
 
 .checkbox-input {

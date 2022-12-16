@@ -129,19 +129,49 @@
 		<ul class="activity__list">
 			<li class="activity__item">
 				<div class="activity__image-block">
-					<img src="./images/img_1.jpg" alt="Крупним планом зображення програміста який працює за своїм столом" width="370">
+					<img 
+						srcset="
+							./images/image/activity/activity-01_d.jpg    1x,
+							./images/image/activity/activity-01_d@2x.jpg 2x
+						"
+						src="./images/image/activity/activity-01_d.jpg" 
+						alt="Крупним планом зображення програміста який працює за своїм столом" 
+						width="370"
+						height="294"
+						loading="lazy"
+					/>
 					<p class="activity__text">Десктопні додатки</p>
 				</div>
 			</li>
 			<li class="activity__item">
 				<div class="activity__image-block">
-					<img src="./images/img_2.jpg" alt="Дизайнери веб-інтерфейсу розробляють програми для смартфонів, команда творців працює над інтерфейсом мобільних телефонів" width="370">
+					<img 
+						srcset="
+							./images/image/activity/activity-02_d.jpg    1x,
+							./images/image/activity/activity-02_d@2x.jpg 2x
+						"
+						src="./images/image/activity/activity-02_d.jpg" 
+						alt="Дизайнери веб-інтерфейсу розробляють програми для смартфонів, команда творців працює над інтерфейсом мобільних телефонів" 
+						width="370"
+						height="294"
+						loading="lazy"
+					/>
 					<p class="activity__text">Мобільні додатки</p>
 				</div>
 			</li>
 			<li class="activity__item">
 				<div class="activity__image-block">
-					<img src="./images/img_3.jpg" alt="Творчий художник веб-дизайн із робочим графічним планшетом із вибором кольорів" width="370">
+					<img 
+						srcset="
+							./images/image/activity/activity-03_d.jpg    1x,
+							./images/image/activity/activity-03_d@2x.jpg 2x
+						"
+						src="./images/image/activity/activity-03_d.jpg" 
+						alt="Творчий художник веб-дизайн із робочим графічним планшетом із вибором кольорів" 
+						width="370"
+						height="294"
+						loading="lazy"
+					/>
 					<p class="activity__text">Дизайнерські рішення</p>
 				</div>
 			</li>
@@ -154,7 +184,20 @@
 			<h2 class="team__title">Наша команда</h2>
 		<ul class="team__list">
 			<li class="team__card card">
-				<img src="./images/igor.jpg" alt="Фото Ігора Дем'яненко">
+				<img 
+					srcset="
+               	./images/image/team/team-01_d.jpg    270w,
+               	./images/image/team/team-01_t.jpg    354w,
+               	./images/image/team/team-01_m.jpg    450w,
+               	./images/image/team/team-01_d@2x.jpg 540w,
+                  ./images/image/team/team-01_t@2x.jpg 708w,
+                  ./images/image/team/team-01_m@2x.jpg 900w
+               "
+               sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+               src="./images/image/team/team-01_m.jpg "
+					alt="Фото Ігора Дем'яненко"
+					loading="lazy"
+				/>
 				<div class="card__info">
 					<h3 class="card__name">Ігор Дем'яненко</h3>
 					<p lang="en" class="card__speciality">Product Designer</p>
@@ -187,7 +230,20 @@
 				</div>
 			</li>
 			<li class="team__card card">
-				<img src="./images/olga.jpg" alt="Фото Ольги Рєпіної">
+				<img 
+					srcset="
+						./images/image/team/team-02_d.jpg    270w,
+						./images/image/team/team-02_t.jpg    354w,
+						./images/image/team/team-02_m.jpg    450w,
+						./images/image/team/team-02_d@2x.jpg 540w,
+						./images/image/team/team-02_t@2x.jpg 708w,
+						./images/image/team/team-02_m@2x.jpg 900w
+					"
+					sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+					src="./images/image/team/team-02_m.jpg "
+					alt="Фото Ольги Рєпіної"
+					loading="lazy"
+				/>
 				<div class="card__info">
 					<h3 class="card__name">Ольга Рєпіна</h3>
 					<p lang="en" class="card__speciality">Frontend Developer</p>
@@ -220,7 +276,20 @@
 				</div>
 			</li>
 			<li class="team__card card">
-				<img src="./images/mykola.jpg" alt="Фото Миколи Тарасова">
+				<img 
+					srcset="
+						./images/image/team/team-03_d.jpg    270w,
+						./images/image/team/team-03_t.jpg    354w,
+						./images/image/team/team-03_m.jpg    450w,
+						./images/image/team/team-03_d@2x.jpg 540w,
+						./images/image/team/team-03_t@2x.jpg 708w,
+						./images/image/team/team-03_m@2x.jpg 900w
+					"
+					sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+					src="./images/image/team/team-03_m.jpg "
+					alt="Фото Миколи Тарасова"
+					loading="lazy"
+				/>
 				<div class="card__info">
 					<h3 class="card__name">Микола Тарасов</h3>
 					<p lang="en" class="card__speciality">Marketing</p>
@@ -253,7 +322,20 @@
 				</div>
 			</li>
 			<li class="team__card card">
-				<img src="./images/misha.jpg" alt="Фото Михайла Єрмакова">
+				<img 
+					srcset="
+						./images/image/team/team-04_d.jpg    270w,
+						./images/image/team/team-04_t.jpg    354w,
+						./images/image/team/team-04_m.jpg    450w,
+						./images/image/team/team-04_d@2x.jpg 540w,
+						./images/image/team/team-04_t@2x.jpg 708w,
+						./images/image/team/team-04_m@2x.jpg 900w
+					"
+					sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+					src="./images/image/team/team-04_m.jpg "
+					alt="Фото Михайла Єрмакова"
+					loading="lazy"
+				/>
 				<div class="card__info">
 					<h3 class="card__name">Михайло Єрмаков</h3>
 					<p lang="en" class="card__speciality">UI Designer</p>

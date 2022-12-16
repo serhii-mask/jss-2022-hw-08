@@ -8,10 +8,6 @@ body {
 	font-weight: 400;
 	letter-spacing: 0.03em;
 
-	&.is-open {
-		overflow: hidden;
-	}
-
 	&.modal-open {
 		overflow: hidden;
 	}
